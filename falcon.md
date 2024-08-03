@@ -31,3 +31,18 @@ math: mathjax
 
 - $A$は$\mathbb{Z}_q$の元を成分とする行列であるので$q\mathbb{Z}^m \subset \Lambda$が満たされる
 - $\Lambda \pmod q$と$\Lambda^\perp_q$が直交しているので$B \cdot A^T$が成り立つ
+
+---
+### 署名生成
+- メッセージ$M$に対して$As = H(M) \quad (H: \{0, 1\}^* \rightarrow \mathbb{Z}^n_q)$となるベクトル$s \in \mathbb{Z}^m_q$が署名となる
+
+---
+#### 計算方法
+
+1. $Ac_0 = H(M)$となる$c_0 \in \mathbb{Z}^m_q$を計算する
+2. $\begin{Vmatrix}B\end{Vmatrix}$が十分小さい$B$を使った離散ガウス分布サンプリングにより$c_0$に近い$v \in \Lambda^\perp_q$を計算する
+3. $M$に対する署名を $s := c_0 - v$とする
+
+
+---
+### 署名検証
