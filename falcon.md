@@ -25,3 +25,9 @@ math: mathjax
 ## Falconの基本形
 ---
 ### 鍵生成
+1. $q\mathbb{Z}^m \subset \Lambda \subset \mathbb{Z}^m$となる格子$\Lambda$を生成する
+2. 公開鍵$A \subset \mathbb{Z}^{n \times m}_q \quad (m > n)$ と $\Lambda \pmod q$に直交する格子$\Lambda^\perp_q$を生成する
+3. $\begin{Vmatrix}B\end{Vmatrix}$が十分小さい秘密鍵$B \in \mathbb{Z}^{m \times m}_q$を生成する
+
+- $A$は$\mathbb{Z}_q$の元を成分とする行列であるので$q\mathbb{Z}^m \subset \Lambda$が満たされる
+- $\Lambda \pmod q$と$\Lambda^\perp_q$が直交しているので$B \cdot A^T$が成り立つ
