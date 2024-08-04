@@ -50,3 +50,9 @@ math: mathjax
 1. $A$を使って$s$が正しい署名であることを検証するのに、$s$が短いことと、$As = H(M)$が成り立つことを確認できたらOK
 
 $s := c_0 - v$が正しい署名となることは$Av = 0$より、$As = A(c_0 - v) = Ac_0 = H(M)$となりわかる。
+
+---
+### 離散ガウス分布サンプリング
+- $\epsilon > 0$として、格子$\Lambda$の基底$B$、任意の$c \in \mathbb{R}^n$、ガウスパラメータ$s \geq \begin{Vmatrix}\bar{B}\end{Vmatrix} \cdot \sqrt{\log{O(\frac{n}{\epsilon})}}$を入力として、離散ガウス分布$D_{c + \Lambda, s}$からの統計的距離$\epsilon$以内の分布からのサンプルを出力する多項式時間乱択アルゴリズムが存在する。
+
+($\bar{B}$は$B$のGram-Schmidt直交化基底である)
